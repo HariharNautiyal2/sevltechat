@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, "client/public")));
 const serveGrip = new ServeGrip(/* config */);
 app.use(serveGrip);
 
-const SERVER_NAME = "Jagan";
+const SERVER_NAME = "Harry";
 
 io.on("connection", (socket) => {
     socket.on("send-message", ({ room, ...rest }, callback) => {
@@ -36,7 +36,7 @@ io.on("connection", (socket) => {
         const { room, username } = joinedUser;
         // Notify the client who joined the chat
         socket.join(room);
-        sendServerMessage(room, `${username} joined the chat`);
+        sendServerMessage(room, ` ${username} has joined the chat`);
 
         socket.broadcast.to(room).emit("user-join", joinedUser); // Emit an event to pass the user object who join the chat
         const roomUsers = getUsersInRoom(room);

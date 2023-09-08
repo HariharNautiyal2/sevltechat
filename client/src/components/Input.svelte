@@ -5,7 +5,7 @@
   export let value = ''
 </script>
 
-<div class={$$props.class}>
+<div class="w-full flex flex-row justify-center">
   <label
     for={label}
     class="block mt-2 text-xs font-semibold text-gray-600 uppercase">

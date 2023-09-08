@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, "client/public")));
 const serveGrip = new ServeGrip(/* config */);
 app.use(serveGrip);
 
-const SERVER_NAME = "_BOT_";
+const SERVER_NAME = "Jagan";
 
 io.on("connection", (socket) => {
     socket.on("send-message", ({ room, ...rest }, callback) => {

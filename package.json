@@ -1,0 +1,28 @@
+{
+  "name": "chat-app-svelte",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon .",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "14.15.1"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "client/*"
+    ]
+  },
+  "keywords": [],
+  "author": "Cris Fandiño Jr. <sircnujnuj@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@fanoutio/serve-grip": "^1.2.0",
+    "cors": "^2.8.5",
+    "date-fns": "^2.16.1",
+    "express": "^4.17.1",
+    "socket.io": "^3.1.0"
+  }
+}
